@@ -49,3 +49,9 @@ class FilterableList(list):
     
     def __mul__(self, *args, **kwargs):
         return self.__class__(super(self.__class__, self).__mul__(*args, **kwargs))
+
+    def copy(self):
+        return self.__class__(super().copy())
+
+    def __getitem__(self, *args, **kwargs):
+        return self.__class__(super().__getitem__(*args, **kwargs))
