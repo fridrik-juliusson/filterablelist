@@ -1,4 +1,4 @@
-from filterablelist.filterable_list import FilterableList
+from filterablelist.filterablelist import FilterableList
 
 class MyClass:
     def __init__(self, x, y, z):

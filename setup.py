@@ -14,7 +14,8 @@ setup(
     url="https://github.com/fridrik-juliusson/filterablelist",
     author="Fridrik Juliusson",
     classifiers=[
-        "Intended Audience :: Developers :: Science/Research",
+        "Intended Audience :: Developers",
+        "Intended Audience :: Science/Research",
         "Topic :: Utilities",
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",
@@ -27,7 +28,7 @@ setup(
     ],
     keywords="list, filter, development, utility",
     package_dir={"": "filterablelist"},
-    py_modules=["filterable_list"],
+    py_modules=["filterablelist"],
     #packages=find_packages(where="src"),
     python_requires=">=3.6, <4",
     project_urls={
