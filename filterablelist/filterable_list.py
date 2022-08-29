@@ -36,8 +36,8 @@ class FilterableList(list):
     def exclude(self, *args, check_subscriptable=True, require_all=True, **kwargs):
         return self.__class__(
             item for item in self if (
-                all(not self._meets_requirements(item=item, key=key, value=value, check_subscriptable=check_subscriptable) for (key, value) in kwargs.items()) if require_all else 
-                any(not self._meets_requirements(item=item, key=key, value=value, check_subscriptable=check_subscriptable) for (key, value) in kwargs.items())
+                not all(self._meets_requirements(item=item, key=key, value=value, check_subscriptable=check_subscriptable) for (key, value) in kwargs.items()) if require_all else 
+                not any(self._meets_requirements(item=item, key=key, value=value, check_subscriptable=check_subscriptable) for (key, value) in kwargs.items())
             )
         )
 
