@@ -94,6 +94,7 @@ The `filter` method takes any number of key-value pairs as arguments and returns
 `**kwargs`: Any number of key-value pairs that you want to use to exclude objects from the new list.
 
 **Description**
+
 Basically the same as `filter` except that items that match the query will be excluded from the new list, rather than included.
 
 ## Comparison Operators
