@@ -34,7 +34,7 @@ setup(
     project_urls={
         'Documentation': 'https://github.com/fridrik-juliusson/filterablelist/',
         "Bug Reports": "https://github.com/fridrik-juliusson/filterablelist/issues",
-        "Say Thanks!": "https://fridrikjuliusson.com/contact/",
+        "Say Thanks!": "https://fridrikjuliusson.com/",
         "Source": "https://github.com/fridrik-juliusson/filterablelist/",
     },
 )
