@@ -7,7 +7,7 @@ long_description = (here / "README.md").read_text(encoding="utf-8")
 
 setup(
     name="filterablelist",
-    version="0.1.0",
+    version="0.1.0.1",
     description="A list with built in filtering syntax.",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -34,7 +34,7 @@ setup(
     project_urls={
         'Documentation': 'https://github.com/fridrik-juliusson/filterablelist/',
         "Bug Reports": "https://github.com/fridrik-juliusson/filterablelist/issues",
-        "Say Thanks!": "https://fridrikjuliusson.com/contact/",
+        "Say Thanks!": "https://fridrikjuliusson.com/",
         "Source": "https://github.com/fridrik-juliusson/filterablelist/",
     },
 )
