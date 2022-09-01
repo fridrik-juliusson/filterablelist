@@ -1,4 +1,4 @@
-# filterable-list
+# filterablelist
 
 A subclass of Python's built in `list`, with two additional methods inspired by the `filter` and `exclude` methods from the Django queryset. These methods allows for complex list filtering with a very simple syntax.
 
