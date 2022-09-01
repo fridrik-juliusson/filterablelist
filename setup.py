@@ -7,7 +7,7 @@ long_description = (here / "README.md").read_text(encoding="utf-8")
 
 setup(
     name="filterablelist",
-    version="0.1.0.1",
+    version="0.1.0.2",
     description="A list with built in filtering syntax.",
     long_description=long_description,
     long_description_content_type="text/markdown",
