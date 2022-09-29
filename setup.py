@@ -7,7 +7,7 @@ long_description = (here / "README.md").read_text(encoding="utf-8")
 
 setup(
     name="filterablelist",
-    version="0.1.0.2",
+    version="0.1.1",
     description="A list with built in filtering syntax.",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -29,7 +29,7 @@ setup(
     keywords="list, filter, development, utility",
     package_dir={"": "filterablelist"},
     py_modules=["filterablelist"],
-    #packages=find_packages(where="src"),
+    # packages=find_packages(where="src"),
     python_requires=">=3.6, <4",
     project_urls={
         'Documentation': 'https://github.com/fridrik-juliusson/filterablelist/',
