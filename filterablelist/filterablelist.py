@@ -28,25 +28,27 @@ class FilterableList(list):
     def filter(self, *args, check_subscriptable=True, require_all=True, **kwargs):
         return self.__class__(
             item for item in self if (
-                all(self._meets_requirements(item=item, key=key, value=value, check_subscriptable=check_subscriptable) for (key, value) in kwargs.items()) if require_all else 
-                any(self._meets_requirements(item=item, key=key, value=value, check_subscriptable=check_subscriptable) for (key, value) in kwargs.items())
+                all(self._meets_requirements(item=item, key=key, value=value, check_subscriptable=check_subscriptable) for (key, value) in kwargs.items()) if require_all else
+                any(self._meets_requirements(item=item, key=key, value=value,
+                    check_subscriptable=check_subscriptable) for (key, value) in kwargs.items())
             )
         )
 
     def exclude(self, *args, check_subscriptable=True, require_all=True, **kwargs):
         return self.__class__(
             item for item in self if (
-                not all(self._meets_requirements(item=item, key=key, value=value, check_subscriptable=check_subscriptable) for (key, value) in kwargs.items()) if require_all else 
-                not any(self._meets_requirements(item=item, key=key, value=value, check_subscriptable=check_subscriptable) for (key, value) in kwargs.items())
+                not all(self._meets_requirements(item=item, key=key, value=value, check_subscriptable=check_subscriptable) for (key, value) in kwargs.items()) if require_all else
+                not any(self._meets_requirements(item=item, key=key, value=value,
+                        check_subscriptable=check_subscriptable) for (key, value) in kwargs.items())
             )
         )
 
     def __add__(self, *args, **kwargs):
         return self.__class__(super(self.__class__, self).__add__(*args, **kwargs))
-    
+
     def __sub__(self, *args, **kwargs):
         return self.__class__(super(self.__class__, self).__sub__(*args, **kwargs))
-    
+
     def __mul__(self, *args, **kwargs):
         return self.__class__(super(self.__class__, self).__mul__(*args, **kwargs))
 
@@ -54,4 +56,6 @@ class FilterableList(list):
         return self.__class__(super().copy())
 
     def __getitem__(self, *args, **kwargs):
+        if len(args) and type(args[0]) == int:
+            return super().__getitem__(*args, **kwargs)
         return self.__class__(super().__getitem__(*args, **kwargs))
